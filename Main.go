@@ -10,10 +10,10 @@ import (
 
 func initAnaconda() *anaconda.TwitterApi {
 	return anaconda.NewTwitterApiWithCredentials(
-		"",
-		"",
-		"",
-		"")
+		os.Getenv("ACCESS_TOKEN"),
+		os.Getenv("ACCESS_TOKEN_SECRET"),
+		os.Getenv("CONSUMER_KEY"),
+		os.Getenv("CONSUMER_KEY_SECRET"))
 }
 
 func main() {
